@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>My first Angular Assignment</title>
+
+</head>
+
+<body ng-app="LunchCheck">
+    <div>
+        <div ng-controller="LunchCheckController" style="margin: auto;width: 50%;">
+            <input ng-style="{'border':'solid','border-color':lunchStatusColor,'width':'100%'}" type="text"
+                ng-model="lunchEatList" placeholder="Please enter lunch eat list with comma seperately">
+            <br>
+            <p ng-style="{'color':lunchStatusColor}">{{lunchStatus}}</p>
+            <br>
+            <input type="button" ng-click="fnIsToomuch()" value="Check If Too Much">
+
+
+        </div>
+    </div>
+</body>
+
+</html>
